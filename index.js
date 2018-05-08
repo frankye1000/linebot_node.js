@@ -19,12 +19,16 @@ app.post('/linewebhook', linebotParser);
 
 bot.on('message', function (event) {
     console.log(event)
+    event.reply(['Hello, world 1', 'Hello, world 2']);
 	event.reply(event.message.text).then(function (data) {
 		console.log('Success', data);
 	}).catch(function (error) {
 		console.log('Error', error);
 	});
+    
 });
+
+
 
 app.listen(process.env.PORT || 80, function () {
 	console.log('LineBot is running.');
