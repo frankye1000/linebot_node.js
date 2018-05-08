@@ -52,6 +52,7 @@ bot.on('message', function (event) {
 bot.on('postback', function (event) {
     if (event.postback.data=='cheer'){
         event.reply(['死肥宅!', '鼓你媽!','去吃屎啦!']);
+        linebot.push(event.source.userId, "123456789" )
     }
     else if(event.postback.data=='hug'){
         event.reply(['不要!', '你又油又臭!'])
