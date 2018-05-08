@@ -37,16 +37,23 @@ bot.on('message', function (event) {
       data: 'action=add&itemid=123'
     }, {
       type: 'uri',
-      label: '老婆性感照',
-      uri: 'https://tw.appledaily.com/new/realtime/20150707/642761/'
+      label: 'View detail',
+      uri: 'http://example.com/page/123'
     }]
   }
-});
+});   
 //	event.reply(event.message.text).then(function (data) {
 //		console.log('Success', data);
 //	}).catch(function (error) {
 //		console.log('Error', error);
 //	});   
+});
+bot.on('postback', function (event) { 
+    event.reply({
+  type: 'sticker',
+  packageId: '1',
+  stickerId: '1'
+});
 });
 
 
