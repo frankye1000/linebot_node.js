@@ -49,12 +49,8 @@ bot.on('message', function (event) {
 //	});   
 });
 
-bot.on('postback', function (event) { 
-    event.reply({
-  type: 'sticker',
-  packageId: '1',
-  stickerId: '1'
-});
+bot.on('postback', function (event) {
+    console.log(event.postback.data)
 });
 
 
