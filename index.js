@@ -24,21 +24,21 @@ bot.on('message', function (event) {
   altText: 'this is a buttons template',
   template: {
     type: 'buttons',
-    thumbnailImageUrl: 'https://example.com/bot/images/image.jpg',
-    title: 'Menu',
-    text: 'Please select',
+    thumbnailImageUrl: 'https://pic.pimg.tw/chennie1982/1362145465-2851540602.jpg?v=1362145470',
+    title: '老婆福利社',
+    text: '不讓你睡',
     actions: [{
       type: 'postback',
-      label: 'Buy',
-      data: 'action=buy&itemid=123'
+      label: '老婆愛的鼓勵',
+      data: 'cheer'
     }, {
       type: 'postback',
-      label: 'Add to cart',
-      data: 'action=add&itemid=123'
+      label: '老婆愛的抱抱',
+      data: 'hug'
     }, {
       type: 'uri',
-      label: 'View detail',
-      uri: 'http://example.com/page/123'
+      label: '老婆性感照',
+      uri: 'https://www.mirrormedia.com.tw/assets/images/20170918171353-db8007d7f0d8209f11dc25010dbb14fd-tablet.jpg'
     }]
   }
 });   
@@ -48,6 +48,7 @@ bot.on('message', function (event) {
 //		console.log('Error', error);
 //	});   
 });
+
 bot.on('postback', function (event) { 
     event.reply({
   type: 'sticker',
