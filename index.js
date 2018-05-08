@@ -50,7 +50,12 @@ bot.on('message', function (event) {
 });
 
 bot.on('postback', function (event) {
-    console.log(event.postback.data)
+    if (event.postback.data=='cheer'){
+        event.reply(['死肥宅!', '鼓你媽!','去吃屎啦!']);
+    }
+    else if(event.postback.data=='hug'){
+        event.reply(['不要!', '你又油又臭!'])
+    }
 });
 
 
