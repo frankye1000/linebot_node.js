@@ -42,17 +42,14 @@ bot.on('message', function (event) {
     }]
   }
 });   
-//	event.reply(event.message.text).then(function (data) {
-//		console.log('Success', data);
-//	}).catch(function (error) {
-//		console.log('Error', error);
-//	});   
 });
 
 bot.on('postback', function (event) {
     if (event.postback.data=='cheer'){
         event.reply(['死肥宅!', '鼓你媽!','去吃屎啦!']);
-        bot.push(event.source.userId, "123456789" )
+        bot.push(event.source.userId,{type: 'sticker',
+                                      packageId: '1',
+                                      stickerId: '1'}  )
     }
     else if(event.postback.data=='hug'){
         event.reply(['不要!', '你又油又臭!'])
