@@ -67,7 +67,7 @@ bot.on('postback', function (event) {
                       }, {
                         type: 'postback',
                         label: '興趣',
-                        data: '採茶、洗米、燒水、煮飯'
+                        data: '採茶 洗米 燒水 煮飯'
                       }]
                     }, {
                       thumbnailImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-Jwa9aJjNjm28Rnq9z-1BvdTsM8xMI3_p9hKz5ggJZgIvAe8',
@@ -89,7 +89,7 @@ bot.on('postback', function (event) {
                     }]
                   }
                 });
-    }
+    },
     else if(event.postback.data=='Indonesia'){
         event.reply({
                   type: 'template',
@@ -133,7 +133,55 @@ bot.on('postback', function (event) {
                     }]
                   }
                 });
+    },
+        else if(event.postback.data=='China'){
+        event.reply({
+                  type: 'template',
+                  altText: 'this is a carousel template',
+                  template: {
+                    type: 'carousel',
+                    columns: [{
+                      thumbnailImageUrl: 'https://78.media.tumblr.com/6d0c3afe55d4c6870f7e4c03fb37d4d2/tumblr_inline_opq72lESBi1ujrr7l_1280.png',
+                      title: '中國電競狂妹-林勞慕',
+                      text: '我最喜歡打電動了 歡迎找我吃雞',
+                      actions: [{
+                        type: 'postback',
+                        label: '三圍',
+                        data: '32A 24 32'
+                      }, {
+                        type: 'postback',
+                        label: '年齡',
+                        data: '20'
+                      }, {
+                        type: 'postback',
+                        label: '興趣',
+                        data: 'LOL 吃雞'
+                      }]
+                    }, {
+                      thumbnailImageUrl: 'https://www.mirrormedia.com.tw/assets/images/20161229173118-abe1cb9cfbb8c2bff8d05ed417f4cf9a-tablet.jpg',
+                      title: '中國景甜-景甜',
+                      text: '我叫景甜 演過各個好萊塢的大片 你一定想問憑什麼? 娶我就知道為什麼了',
+                      actions: [{
+                        type: 'postback',
+                        label: '三圍',
+                        data: '32B 24 32'
+                      }, {
+                        type: 'postback',
+                        label: '年齡',
+                        data: '24'
+                      }, {
+                        type: 'postback',
+                        label: '興趣',
+                        data: '演戲 演好萊塢的戲'
+                      }]
+                    }]
+                  }
+                });
     }
+
+
+
+
 });
 
 
