@@ -46,6 +46,7 @@ bot.on('message', function (event) {
 });
 
 bot.on('postback', function (event) {
+    console.log(event)
     if (event.postback.data=='Vietnam'){
         event.reply({
                   type: 'template',
@@ -177,9 +178,7 @@ bot.on('postback', function (event) {
                   }
                 });
     }
-    if(event.postback.label=="三圍"){
-        event.reply(event.postback.data)
-    }
+    
 
 
 
