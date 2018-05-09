@@ -89,7 +89,7 @@ bot.on('postback', function (event) {
                     }]
                   }
                 });
-    }else if(event.postback.data=='Indonesia'){
+    }if(event.postback.data=='Indonesia'){
         event.reply({
                   type: 'template',
                   altText: 'this is a carousel template',
@@ -132,7 +132,7 @@ bot.on('postback', function (event) {
                     }]
                   }
                 });
-    }else if(event.postback.data=='China'){
+    }if(event.postback.data=='China'){
         event.reply({
                   type: 'template',
                   altText: 'this is a carousel template',
