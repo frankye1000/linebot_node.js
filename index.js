@@ -40,10 +40,6 @@ bot.on('message', function (event) {
       type: 'postback',
       label: '大陸',
       data: 'china'
-    }{
-      type: 'postback',
-      label: '大陸東北',
-      data: 'chinanorth'
     }]
   }
 });   
