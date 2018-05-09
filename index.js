@@ -89,7 +89,8 @@ bot.on('postback', function (event) {
                     }]
                   }
                 });
-    }if(event.postback.data=='Indonesia'){
+    }
+    if(event.postback.data=='Indonesia'){
         event.reply({
                   type: 'template',
                   altText: 'this is a carousel template',
@@ -141,7 +142,7 @@ bot.on('postback', function (event) {
                     columns: [{
                       thumbnailImageUrl: 'https://78.media.tumblr.com/6d0c3afe55d4c6870f7e4c03fb37d4d2/tumblr_inline_opq72lESBi1ujrr7l_1280.png',
                       title: '中國電競狂妹-林勞慕',
-                      text: '我最喜歡打電動了 歡迎找我吃雞',
+                      text: '我最喜歡打電動了 歡迎找我吃雞 不是男生的雞雞喔 哈哈哈哈哈哈',
                       actions: [{
                         type: 'postback',
                         label: '三圍',
@@ -153,12 +154,12 @@ bot.on('postback', function (event) {
                       }, {
                         type: 'postback',
                         label: '興趣',
-                        data: 'LOL 吃雞'
+                        data: 'LOL 吃雞雞'
                       }]
                     }, {
                       thumbnailImageUrl: 'https://www.mirrormedia.com.tw/assets/images/20161229173118-abe1cb9cfbb8c2bff8d05ed417f4cf9a-tablet.jpg',
                       title: '中國景甜-景甜',
-                      text: '我叫景甜 演過各個好萊塢的大片 你一定想問憑什麼? 娶我就知道為什麼了',
+                      text: '我叫景甜 我超屌 演過各個好萊塢的大片 你一定想問憑什麼? 娶我就知道了',
                       actions: [{
                         type: 'postback',
                         label: '三圍',
@@ -175,6 +176,9 @@ bot.on('postback', function (event) {
                     }]
                   }
                 });
+    }
+    if(event.postback.label=="三圍"){
+        event.reply(event.postback.data)
     }
 
 
