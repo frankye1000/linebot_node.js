@@ -19,7 +19,7 @@ app.post('/linewebhook', linebotParser);
 
 
 bot.on('message', function (event) {
-    bot.push(event.source.userId, ["歡迎使用外籍配偶機器人","您的幸福我來幫你掌握"])
+    bot.push(event.source.userId, ["歡迎使用外籍配偶機器人","您的幸福 我來掌握"])
     event.reply({
   type: 'template',
   altText: 'this is a buttons template',
@@ -47,12 +47,50 @@ bot.on('message', function (event) {
 
 bot.on('postback', function (event) {
     if (event.postback.data=='Vietnam'){
-        event.reply(['死肥宅!', '鼓你媽!']);
-        bot.push(event.source.userId,{type: 'sticker',
-                                      packageId: '1',
-                                      stickerId: '7'}  )
+        event.reply({
+                  type: 'template',
+                  altText: 'this is a carousel template',
+                  template: {
+                    type: 'carousel',
+                    columns: [{
+                      thumbnailImageUrl: 'https://cw1.tw/CW/images/blog/C1436151497588.jpg',
+                      title: '越南姑娘-阮月嬌',
+                      text: '你好 帥哥 我是來自胡志明市的阮月嬌',
+                      actions: [{
+                        type: 'postback',
+                        label: '三圍',
+                        data: '32F 24 32'
+                      }, {
+                        type: 'postback',
+                        label: '年齡',
+                        data: '24'
+                      }, {
+                        type: 'postback',
+                        label: '興趣',
+                        data: '採茶、洗米、燒水、煮飯'
+                      }]
+                    }, {
+                      thumbnailImageUrl: 'https://www.hahatai.com/sites/default/files/users/u375/20161212/1%E8%B6%8A%E5%8D%97%E6%98%86%E5%87%8C_0.jpg',
+                      title: '越南昆凌-鄧阿金',
+                      text: 'description',
+                      actions: [{
+                        type: 'postback',
+                        label: '三圍',
+                        data: '32E 24 32'
+                      }, {
+                        type: 'postback',
+                        label: '年齡',
+                        data: '秘密'
+                      }, {
+                        type: 'postback',
+                        label: '興趣',
+                        data: '參加貴婦活動、喝酒、唱情歌'
+                      }]
+                    }]
+                  }
+                });
     }
-    else if(event.postback.data=='hug'){
+    else if(event.postback.data=='Indonesia'){
         event.reply(['不要!', '你又油又臭!'])
     }
 });
