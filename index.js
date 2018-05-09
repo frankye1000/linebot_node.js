@@ -72,7 +72,7 @@ bot.on('postback', function (event) {
                     }, {
                       thumbnailImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-Jwa9aJjNjm28Rnq9z-1BvdTsM8xMI3_p9hKz5ggJZgIvAe8',
                       title: '越南昆凌-鄧阿金',
-                      text: 'description',
+                      text: '不要猶豫 你就是我的周杰倫',
                       actions: [{
                         type: 'postback',
                         label: '三圍',
@@ -91,7 +91,48 @@ bot.on('postback', function (event) {
                 });
     }
     else if(event.postback.data=='Indonesia'){
-        event.reply(['不要!', '你又油又臭!'])
+        event.reply({
+                  type: 'template',
+                  altText: 'this is a carousel template',
+                  template: {
+                    type: 'carousel',
+                    columns: [{
+                      thumbnailImageUrl: 'https://cw1.tw/CW/images/blog/C1436151497588.jpg',
+                      title: '越南姑娘-阮月嬌',
+                      text: '你好 帥哥 我是來自胡志明市的阮月嬌',
+                      actions: [{
+                        type: 'postback',
+                        label: '三圍',
+                        data: '32F 24 32'
+                      }, {
+                        type: 'postback',
+                        label: '年齡',
+                        data: '24'
+                      }, {
+                        type: 'postback',
+                        label: '興趣',
+                        data: '採茶、洗米、燒水、煮飯'
+                      }]
+                    }, {
+                      thumbnailImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-Jwa9aJjNjm28Rnq9z-1BvdTsM8xMI3_p9hKz5ggJZgIvAe8',
+                      title: '越南昆凌-鄧阿金',
+                      text: '不要猶豫 你就是我的周杰倫',
+                      actions: [{
+                        type: 'postback',
+                        label: '三圍',
+                        data: '32E 24 32'
+                      }, {
+                        type: 'postback',
+                        label: '年齡',
+                        data: '秘密'
+                      }, {
+                        type: 'postback',
+                        label: '興趣',
+                        data: '參加貴婦活動、喝酒、唱情歌'
+                      }]
+                    }]
+                  }
+                });
     }
 });
 
