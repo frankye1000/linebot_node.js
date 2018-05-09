@@ -178,7 +178,9 @@ bot.on('postback', function (event) {
                   }
                 });
     }
-    
+    else{
+        event.reply(event.postback.data)
+    }
 
 
 
