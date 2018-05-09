@@ -17,42 +17,215 @@ app.get('/',function(req,res){
 
 app.post('/linewebhook', linebotParser);
 
+
 bot.on('message', function (event) {
-    console.log(event)
+    bot.push(event.source.userId, ["歡迎使用外籍配偶機器人","您的幸福我來幫你掌握"])
     event.reply({
   type: 'template',
   altText: 'this is a buttons template',
   template: {
     type: 'buttons',
-    thumbnailImageUrl: 'https://pic.pimg.tw/chennie1982/1362145465-2851540602.jpg?v=1362145470',
-    title: '老婆福利社',
-    text: '不讓你睡',
+    thumbnailImageUrl: 'https://cdn2.ettoday.net/images/1914/1914546.jpg',
+    title: '各國佳麗任居挑選',
+    text: '跨國境全包辦費用 保證全程無自費',
     actions: [{
       type: 'postback',
-      label: '老婆愛的鼓勵',
-      data: 'cheer'
+      label: '越南',
+      data: 'Vietnam'
     }, {
       type: 'postback',
-      label: '老婆愛的抱抱',
-      data: 'hug'
+      label: '印尼',
+      data: 'Indonesia'
     }, {
-      type: 'uri',
-      label: '老婆性感照',
-      uri: 'https://www.mirrormedia.com.tw/assets/images/20170918171353-db8007d7f0d8209f11dc25010dbb14fd-tablet.jpg'
+      type: 'postback',
+      label: '大陸',
+      data: 'China'
+    }{
+      type: 'postback',
+      label: '大陸東北',
+      data: 'Chinanorth'
     }]
   }
 });   
 });
 
 bot.on('postback', function (event) {
-    if (event.postback.data=='cheer'){
-        event.reply(['死肥宅!', '鼓你媽!']);
-        bot.push(event.source.userId,{type: 'sticker',
-                                      packageId: '1',
-                                      stickerId: '7'}  )
+    if (event.postback.data=='Vietnam'){
+        event.reply({
+  type: 'template',
+  altText: 'this is a carousel template',
+  template: {
+    type: 'carousel',
+    columns: [{
+      thumbnailImageUrl: 'https://example.com/bot/images/item1.jpg',
+      title: 'this is menu',
+      text: 'description',
+      actions: [{
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=111'
+      }, {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=111'
+      }, {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/111'
+      }]
+    }, {
+      thumbnailImageUrl: 'https://example.com/bot/images/item2.jpg',
+      title: 'this is menu',
+      text: 'description',
+      actions: [{
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=222'
+      }, {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=222'
+      }, {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/222'
+      }]
+    }]
+  }
+});
+        
     }
-    else if(event.postback.data=='hug'){
-        event.reply(['不要!', '你又油又臭!'])
+    else if(event.postback.data=='Indonesia'){
+        event.reply({
+  type: 'template',
+  altText: 'this is a carousel template',
+  template: {
+    type: 'carousel',
+    columns: [{
+      thumbnailImageUrl: 'https://example.com/bot/images/item1.jpg',
+      title: 'this is menu',
+      text: 'description',
+      actions: [{
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=111'
+      }, {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=111'
+      }, {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/111'
+      }]
+    }, {
+      thumbnailImageUrl: 'https://example.com/bot/images/item2.jpg',
+      title: 'this is menu',
+      text: 'description',
+      actions: [{
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=222'
+      }, {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=222'
+      }, {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/222'
+      }]
+    }]
+  }
+});
+    }
+    else if(event.postback.data=='China'){
+        event.reply({
+  type: 'template',
+  altText: 'this is a carousel template',
+  template: {
+    type: 'carousel',
+    columns: [{
+      thumbnailImageUrl: 'https://example.com/bot/images/item1.jpg',
+      title: 'this is menu',
+      text: 'description',
+      actions: [{
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=111'
+      }, {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=111'
+      }, {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/111'
+      }]
+    }, {
+      thumbnailImageUrl: 'https://example.com/bot/images/item2.jpg',
+      title: 'this is menu',
+      text: 'description',
+      actions: [{
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=222'
+      }, {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=222'
+      }, {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/222'
+      }]
+    }]
+  }
+});
+    }
+    else if(event.postback.data=='Chinanorth'){
+        event.reply({
+  type: 'template',
+  altText: 'this is a carousel template',
+  template: {
+    type: 'carousel',
+    columns: [{
+      thumbnailImageUrl: 'https://example.com/bot/images/item1.jpg',
+      title: 'this is menu',
+      text: 'description',
+      actions: [{
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=111'
+      }, {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=111'
+      }, {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/111'
+      }]
+    }, {
+      thumbnailImageUrl: 'https://example.com/bot/images/item2.jpg',
+      title: 'this is menu',
+      text: 'description',
+      actions: [{
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=222'
+      }, {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=222'
+      }, {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/222'
+      }]
+    }]
+  }
+});
     }
 });
 
