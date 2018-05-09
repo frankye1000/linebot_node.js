@@ -80,11 +80,11 @@ bot.on('postback', function (event) {
                       }, {
                         type: 'postback',
                         label: '年齡',
-                        data: '秘密'
+                        data: '不能說的秘密'
                       }, {
                         type: 'postback',
                         label: '興趣',
-                        data: '參加貴婦活動、喝酒、唱情歌'
+                        data: '唱周杰倫的歌'
                       }]
                     }]
                   }
@@ -97,38 +97,38 @@ bot.on('postback', function (event) {
                   template: {
                     type: 'carousel',
                     columns: [{
-                      thumbnailImageUrl: 'https://cw1.tw/CW/images/blog/C1436151497588.jpg',
-                      title: '越南姑娘-阮月嬌',
-                      text: '你好 帥哥 我是來自胡志明市的阮月嬌',
+                      thumbnailImageUrl: 'https://buzzorange.com/wp-content/uploads/2018/03/10730479896_c228c2871d_z.jpg',
+                      title: '印尼林志玲-帕昵尼',
+                      text: '台灣的帥哥 我都愛 快來娶我',
                       actions: [{
                         type: 'postback',
                         label: '三圍',
-                        data: '32F 24 32'
+                        data: '32A 24 32'
                       }, {
                         type: 'postback',
                         label: '年齡',
-                        data: '24'
+                        data: '32'
                       }, {
                         type: 'postback',
                         label: '興趣',
-                        data: '採茶、洗米、燒水、煮飯'
+                        data: '把全身包起來 剩眼睛'
                       }]
                     }, {
-                      thumbnailImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-Jwa9aJjNjm28Rnq9z-1BvdTsM8xMI3_p9hKz5ggJZgIvAe8',
-                      title: '越南昆凌-鄧阿金',
-                      text: '不要猶豫 你就是我的周杰倫',
+                      thumbnailImageUrl: 'https://i.ytimg.com/vi/VA7JRDu8RvA/maxresdefault.jpg',
+                      title: '印尼鄧紫琪-汙烏達',
+                      text: '我今年剛從台灣大學畢業 夢想就是成為台灣新娘',
                       actions: [{
                         type: 'postback',
                         label: '三圍',
-                        data: '32E 24 32'
+                        data: '32B 24 32'
                       }, {
                         type: 'postback',
                         label: '年齡',
-                        data: '秘密'
+                        data: '22'
                       }, {
                         type: 'postback',
                         label: '興趣',
-                        data: '參加貴婦活動、喝酒、唱情歌'
+                        data: '把全身包起來 剩眼睛'
                       }]
                     }]
                   }
