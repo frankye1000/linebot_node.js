@@ -89,7 +89,7 @@ bot.on('postback', function (event) {
                     }]
                   }
                 });
-    },
+    }
     else if(event.postback.data=='Indonesia'){
         event.reply({
                   type: 'template',
@@ -133,7 +133,7 @@ bot.on('postback', function (event) {
                     }]
                   }
                 });
-    },
+    }
         else if(event.postback.data=='China'){
         event.reply({
                   type: 'template',
