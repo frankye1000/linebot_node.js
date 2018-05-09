@@ -39,7 +39,7 @@ bot.on('message', function (event) {
     }, {
       type: 'postback',
       label: '大陸',
-      data: 'china'
+      data: 'China'
     }]
   }
 });   
