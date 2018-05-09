@@ -70,7 +70,7 @@ bot.on('postback', function (event) {
                         data: '採茶、洗米、燒水、煮飯'
                       }]
                     }, {
-                      thumbnailImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj1NxEtYYf_0NXZDmBRsRTgp0gZGPgFAfu-eruITI7nssFfkno',
+                      thumbnailImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-Jwa9aJjNjm28Rnq9z-1BvdTsM8xMI3_p9hKz5ggJZgIvAe8',
                       title: '越南昆凌-鄧阿金',
                       text: 'description',
                       actions: [{
