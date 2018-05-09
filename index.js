@@ -70,7 +70,7 @@ bot.on('postback', function (event) {
                         data: '採茶、洗米、燒水、煮飯'
                       }]
                     }, {
-                      thumbnailImageUrl: 'https://www.hahatai.com/sites/default/files/users/u375/20161212/1%E8%B6%8A%E5%8D%97%E6%98%86%E5%87%8C_0.jpg',
+                      thumbnailImageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj1NxEtYYf_0NXZDmBRsRTgp0gZGPgFAfu-eruITI7nssFfkno',
                       title: '越南昆凌-鄧阿金',
                       text: 'description',
                       actions: [{
